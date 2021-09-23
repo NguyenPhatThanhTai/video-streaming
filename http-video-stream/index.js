@@ -4,7 +4,7 @@ const fs = require("fs");
 var request = require('request');
 
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + "/index.html");
+    res.send("Running");
 });
 
 app.get("/video", function(req, res) {
