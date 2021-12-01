@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const server = require("http").Server(app);
 const fs = require("fs");
 var request = require('request');
 
@@ -51,6 +52,4 @@ app.get("/video", function(req, res) {
     }
 });
 
-app.listen(process.env.PORT || 8000, function() {
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+server.listen(process.env.PORT || 8000);
